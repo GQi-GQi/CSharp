@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace week1
 {
-    class Program
+    #region 第一个C#程序
+    public class Program1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
+            Console.WriteLine("Hello from Wrox.");
+            Console.ReadLine();
+            return;
         }
     }
+    #endregion
+
+
 }
