@@ -40,20 +40,21 @@ namespace week1
     #endregion
 
     #region 2.3.2变量作用域
-    public class  Program3
-    {
-        public static void Main(string[]  args)
-        {
-            for (int i = 0; i < 10; i++)     //i只作用于这个循环
-            {
-                Console.WriteLine(i);
-            }
-            for (int i = 9; i >= 0; i--)     //i只作用于这个循环
-            {
-                Console.WriteLine(i);
-            }
-            return;
-        }
-    }
+    //public class  Program3
+    //{
+    //    public static void Main(string[]  args)
+    //    {
+    //        for (int i = 0; i < 10; i++)     //i只作用于这个循环
+    //        {
+    //            Console.WriteLine(i);
+    //        }
+    //        for (int i = 9; i >= 0; i--)     //i只作用于这个循环
+    //        {
+    //            Console.WriteLine(i);
+    //        }
+    //        return;
+    //    }
+    //}
     #endregion
+
 }
