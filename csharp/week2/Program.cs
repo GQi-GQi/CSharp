@@ -7,25 +7,15 @@ using System.Threading.Tasks;
 
 namespace program
 {
-    class Client    //然后在菜单Project->***** Properties->Application选项卡中的Startup object：中，选择你希望那个作为程序入口的Main()函数所在的类的类名，运行即可！
+    class ArgsExample           //使用命令就可以编译这段代码。在运行编译好的可执行文件时，可以在程序名的后面加上参数。eg：ArgeExample /a/b/c
     {
-        public static int Main()
+        public static int Main(string[] args)
         {
-            MathExample.Main();
+            for (int i = 0; i < args.Length; i++)
+            {
+                Console.WriteLine(args[i]);
+            }
             return 0;
-        }
-        class MathExample
-        {
-            static int Add(int x,int y)
-            {
-                return x + y;
-            }
-            public static int Main()
-            {
-                int i = Add(5, 10);
-                Console.WriteLine(i);
-                return 0;
-            }
         }
     }
 }
