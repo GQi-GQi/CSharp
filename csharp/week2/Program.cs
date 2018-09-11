@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Introduction = Wrox.ProCSharp.Basics;
 
 
-class Test
+namespace program
 {
-    public static int Main()
+    class Client    //然后在菜单Project->***** Properties->Application选项卡中的Startup object：中，选择你希望那个作为程序入口的Main()函数所在的类的类名，运行即可！
     {
-        Introduction::NamespaceExample NSEx = new Introduction.NamespaceExample();
-        Console.WriteLine(NSEx.GetNamespace());
-        Console.ReadLine();
-        return 0;
-    }
-}
-
-namespace Wrox.ProCSharp.Basics
-{
-    class NamespaceExample
-    {
-        public string GetNamespace()
+        public static int Main()
         {
-            return this.GetType().Namespace;
+            MathExample.Main();
+            return 0;
+        }
+        class MathExample
+        {
+            static int Add(int x,int y)
+            {
+                return x + y;
+            }
+            public static int Main()
+            {
+                int i = Add(5, 10);
+                Console.WriteLine(i);
+                return 0;
+            }
         }
     }
 }
