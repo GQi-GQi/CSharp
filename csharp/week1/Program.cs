@@ -24,7 +24,7 @@ namespace week1
     //    static void Main(string[] args)
     //    {
     //        var name = "Bugs Bunny";
-    //        var age = 25;
+    //        var age = 25;    //自动识别age的类型
     //        var isRabbit = true;
 
     //        Type nameType = name.GetType();
