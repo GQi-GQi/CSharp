@@ -5,30 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program               //3.5 结构
+namespace Program               //3.7 部分类
 {
-    struct Dimensions       //创建一个结构类型
+    
+    partial class MyClass     //创建一个类
     {
-        public double Length;
-        public double Width;
-
-        public Dimensions(double length,double width)
+        public void MethodOne()
         {
-            Length = length;
-            Width = width;
-        }
 
-        public double Diagonal
-        {
-            get
-            {
-                return Math.Sqrt(Length * Length + Width * Width);
-            }
         }
     }
-    public class MyClass     //创建一个类
+
+
+    partial class MyClasss    //在另个.cs文件创建同名类(编译的时候会合成同一个类）
     {
-        
+        public void MethodTwo()
+        {
+
+        }
     }
     
 }
