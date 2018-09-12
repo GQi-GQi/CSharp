@@ -22,7 +22,7 @@ namespace Program
             Console.WriteLine("ints[0] = " + ints[0]);
             Console.WriteLine("Calling SomeFunction.");
 
-            SomeFunction(ints, i);
+            SomeFunction(ints,ref i);
             Console.WriteLine("i = " + i);
             Console.WriteLine("ints[0] = " + ints[0]);
             return 0;
