@@ -5,41 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program               //3.9 Object类
+namespace Program               //3.10 扩展方法
 {
     
-    class MainEntryPoint    
+    public static class MoneyEXtension
     {
-        static void Main(string[] args)
+        public static void AddToAmount(this Money money, decimal amountToAdd)
         {
-            Money cash1 = new Money();
-            cash1.Amount = 40m;
-            Console.WriteLine("cash1.ToString() returns: " + cash1.ToString());
-            Console.ReadLine();
+            money.AddToAmount += amountToAdd;
         }
     }
-    public class Money
-    {
-        private decimal amount;
-
-        public decimal Amount
-        {
-            get
-            {
-                return amount;
-            }
-
-            set
-            {
-                amount = value;
-            }
-        }
-        public override string ToString()
-        {
-            return "$" + Amount.ToString();
-        }
-
-    }
-         
-    
 }
