@@ -5,29 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program
+namespace Program               //3.3.2.2 属性
 {
-    class ParmeterTest      //给方法的重载
+    class MyClass      //给age字段添加一个属性
     {
-        void DisplayResult(string result)
-        {
-            // implementation
-        }
+        private int age;
 
-        void DisplayResult(int result)
+        public int Age
         {
-            // implementation
-        }
-    }
-    class MyClass
-    {
-        int DoSomething(int x)
-        {
-            DoSomething(int x, int y);
-        }
-        int DoSomething(int x,int y)
-        {
-            // implementation
+            get
+            {
+                return age;
+            }
+
+            set
+            {
+                age = value;
+            }
         }
     }
     
