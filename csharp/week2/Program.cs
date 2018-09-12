@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program               //3.7 部分类
+namespace Program               //3.8 静态类
 {
     
-    partial class MyClass     //创建一个类
+    static class StaticUtilities     //创建一个静态类
     {
         public void MethodOne()
         {
