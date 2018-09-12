@@ -5,20 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program               //3.3.2.3 构造函数
+namespace Program               //3.3.2.3 构造函数（静态构造函数）
 {
-    class MyClass      //给类MyClass添加一个构造函数
+    public class UserPreferences     //创建一个类
     {
-        public MyClass()            //和类名一致（一般默认）
+        public static readonly ConsoleColor BackColor;
+        static UserPreferences()
         {
-            
+            DateTime now = DateTime.Now;
+            if (now.DayOfWeek == DayOfWeek.Saturday || now.DayOfWeek == DayOfWeek.Sunday)
+                BackColor = ConsoleColor.Green;
+            else
+                BackColor = ConsoleColor.Red;
         }
-        private int number;
-        public MyClass(int number)  //构造函数重载（编译器不会提供默认，需要自己第一）
+        private UserPreferences()
         {
-            this.number = number;
+
         }
 
+        static void Main()
+        {
+            Console.ReadLine();
+            return;
+        }
     }
     
 }
