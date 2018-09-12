@@ -5,28 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program               //3.3.2.3 构造函数（静态构造函数）
+namespace Program               //3.3.2.3 构造函数（构造函数调用其他构造函数）
 {
-    public class UserPreferences     //创建一个类
+    public class Car     //创建一个类
     {
-        public static readonly ConsoleColor BackColor;
-        static UserPreferences()
+        private string description;
+        private uint nWheels;
+        public Car(string description,uint nWheel)
         {
-            DateTime now = DateTime.Now;
-            if (now.DayOfWeek == DayOfWeek.Saturday || now.DayOfWeek == DayOfWeek.Sunday)
-                BackColor = ConsoleColor.Green;
-            else
-                BackColor = ConsoleColor.Red;
-        }
-        private UserPreferences()
-        {
-
+            this.description = description;
+            this.nWheels = nWheels;
         }
 
-        static void Main()
+        public Car(string description)
         {
-            Console.ReadLine();
-            return;
+            this.description = description;
+            this.nWheels = 4;
         }
     }
     
