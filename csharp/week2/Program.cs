@@ -5,24 +5,41 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program               //3.8 静态类
+namespace Program               //3.9 Object类
 {
     
-    static class StaticUtilities     //创建一个静态类
+    class MainEntryPoint    
     {
-        public void MethodOne()
+        static void Main(string[] args)
         {
-
+            Money cash1 = new Money();
+            cash1.Amount = 40m;
+            Console.WriteLine("cash1.ToString() returns: " + cash1.ToString());
+            Console.ReadLine();
         }
     }
-
-
-    partial class MyClasss    //在另个.cs文件创建同名类(编译的时候会合成同一个类）
+    public class Money
     {
-        public void MethodTwo()
-        {
+        private decimal amount;
 
+        public decimal Amount
+        {
+            get
+            {
+                return amount;
+            }
+
+            set
+            {
+                amount = value;
+            }
         }
+        public override string ToString()
+        {
+            return "$" + Amount.ToString();
+        }
+
     }
+         
     
 }
