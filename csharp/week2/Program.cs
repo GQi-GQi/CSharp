@@ -7,19 +7,27 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    class ParmeterTest      //给方法传递参数（区别值类型，引用类型）
+    class ParmeterTest      //给方法的重载
     {
-        static void SomeFunction(out int i)     //out关键字
+        void DisplayResult(string result)
         {
-            i = 100;
+            // implementation
         }
-        public static int Main()
+
+        void DisplayResult(int result)
         {
-            int i;
-            SomeFunction(out i);
-            Console.WriteLine("i = " + i);
-            Console.ReadLine();
-            return 0;
+            // implementation
+        }
+    }
+    class MyClass
+    {
+        int DoSomething(int x)
+        {
+            DoSomething(int x, int y);
+        }
+        int DoSomething(int x,int y)
+        {
+            // implementation
         }
     }
     
