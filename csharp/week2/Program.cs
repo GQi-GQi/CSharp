@@ -5,24 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Program               //3.3.2.2 属性
+namespace Program               //3.3.2.3 构造函数
 {
-    class MyClass      //给age字段添加一个属性
+    class MyClass      //给类MyClass添加一个构造函数
     {
-        private int age;
-
-        public int Age
+        public MyClass()            //和类名一致（一般默认）
         {
-            get
-            {
-                return age;
-            }
-
-            set
-            {
-                age = value;
-            }
+            
         }
+        private int number;
+        public MyClass(int number)  //构造函数重载（编译器不会提供默认，需要自己第一）
+        {
+            this.number = number;
+        }
+
     }
     
 }
