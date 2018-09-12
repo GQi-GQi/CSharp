@@ -7,39 +7,18 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    class Program      //方法
+    class Program      //类（储存在堆上的引用类型）
     {
-        //方法的声明
-        public bool IsPositive(int value)
-        {
-            if (value < 0)
-                return false;
-            return true;
-        }
+        public const string DayOfSendingBill = "Monday";
+        public int CustomerID;
+        public string FirstName;
+        public string LastName;
     }
-    class MainEntryOoint
+    struct PhoneCustomerStruct      //结构（储存在栈上的值类型，较小的数据类型使用结构可以提高性能）
     {
-        static void Main()
-        {
-            Console.WriteLine("Pi is " + MathTest.GetPi());
-        }
-    }
-    class MathTest
-    {
-        public int value;
-        public int GetSquare()
-        {
-            return value * value;
-        }
-
-        public static int GetSquareOf(int x)
-        {
-            return x * x;
-        }
-
-        public static double GetPi()
-        {
-            return 3.1415926;
-        }
+        public const string DayOfSendingBill = "Monday";
+        public int CustomerID;
+        public string FirstName;
+        public string LastName;
     }
 }
