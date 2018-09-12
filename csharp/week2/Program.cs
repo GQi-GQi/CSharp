@@ -7,18 +7,26 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    class Program      //类（储存在堆上的引用类型）
+    class ParmeterTest      //给方法传递参数
     {
-        public const string DayOfSendingBill = "Monday";
-        public int CustomerID;
-        public string FirstName;
-        public string LastName;
+        static void SomeFunction(int[] ints, int i)
+        {
+            ints[0] = 100;
+            i = 100;
+        }
+        public static int Main()
+        {
+            int i = 0;
+            int[] ints = { 0, 1, 2, 4, 8 };
+            Console.WriteLine("i = " + i);
+            Console.WriteLine("ints[0] = " + ints[0]);
+            Console.WriteLine("Calling SomeFunction.");
+
+            SomeFunction(ints, i);
+            Console.WriteLine("i = " + i);
+            Console.WriteLine("ints[0] = " + ints[0]);
+            return 0;
+        }
     }
-    struct PhoneCustomerStruct      //结构（储存在栈上的值类型，较小的数据类型使用结构可以提高性能）
-    {
-        public const string DayOfSendingBill = "Monday";
-        public int CustomerID;
-        public string FirstName;
-        public string LastName;
-    }
+    
 }
