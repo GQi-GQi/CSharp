@@ -4,25 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public interface IInterface1 { }        //接口1
 
-public interface IInterface2 { }        //接口2
-public class MyBaseClass
+public class MyBaseClass        //创建一个类
 {
+    public virtual string VirtualMethod()       //把一个基类函数声明为virtual，就可以在任何派生类中重写该函数（虚方法）
+    {
+        return "This menthod is virtual and define in MyBaseClass";
+    }
 
-}
-public  class MyDerivedClass: MyBaseClass           //继承的用法，MyDerivedClass派生自MyBaseClass
-{
-    //
-}
-
-
-public class MyDerivedClassTwo: MyDerivedClass,IInterface1,IInterface2     //类派生自接口或类，用逗号隔开
-{
-
+    private string foreName;
+    public virtual string ForeName      //虚属性
+    {
+        get { return foreName; }
+        set { foreName = value; }
+    }
 }
 
-public struct MyDerivedStruct: IInterface1,IInterface2          //结构派生自接口
+public class MyDerivedClass: MyBaseClass
 {
-
+    public override string VirtualMethod()      //虚方法的重写
+    {
+        return "This method is an override defined in MyDerivedClass.";
+    }
 }
