@@ -7,23 +7,16 @@ using System.Threading.Tasks;
 
 public class MyBaseClass        //创建一个类
 {
-    public virtual string VirtualMethod()       //把一个基类函数声明为virtual，就可以在任何派生类中重写该函数（虚方法）
+    public int MyGroovyMethod()
     {
-        return "This menthod is virtual and define in MyBaseClass";
-    }
-
-    private string foreName;
-    public virtual string ForeName      //虚属性
-    {
-        get { return foreName; }
-        set { foreName = value; }
+        return 1;
     }
 }
 
 public class MyDerivedClass: MyBaseClass
 {
-    public override string VirtualMethod()      //虚方法的重写
+    public new int MyGroovyMethod()
     {
-        return "This method is an override defined in MyDerivedClass.";
+        return 0;
     }
 }
