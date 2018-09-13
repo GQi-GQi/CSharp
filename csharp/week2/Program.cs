@@ -5,18 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-class CustomerAccount        //创建一个类
+abstract class CustomerAccount        //创建一个抽象类
 {
-    public virtual decimal CalculatePrice()
-    {
-        return 0.1M;
-    }
-}
-
-class GoldAccount: CustomerAccount
-{
-    public override decimal CalculatePrice()
-    {
-        return base.CalculatePrice() * 0.9M;
-    }
+    public abstract decimal CalcuateHeatingCost();      //定义一个抽象函数
 }
