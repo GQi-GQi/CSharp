@@ -5,18 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public class MyBaseClass        //创建一个类
+class CustomerAccount        //创建一个类
 {
-    public int MyGroovyMethod()
+    public virtual decimal CalculatePrice()
     {
-        return 1;
+        return 0.1M;
     }
 }
 
-public class MyDerivedClass: MyBaseClass
+class GoldAccount: CustomerAccount
 {
-    public new int MyGroovyMethod()
+    public override decimal CalculatePrice()
     {
-        return 0;
+        return base.CalculatePrice() * 0.9M;
     }
 }
