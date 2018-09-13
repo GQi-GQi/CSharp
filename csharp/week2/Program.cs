@@ -4,15 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+public interface IInterface1 { }        //接口1
 
-namespace Program               //3.10 扩展方法
+public interface IInterface2 { }        //接口2
+public class MyBaseClass
 {
-    
-    public static class MoneyEXtension
-    {
-        public static void AddToAmount(this Money money, decimal amountToAdd)
-        {
-            money.AddToAmount += amountToAdd;
-        }
-    }
+
+}
+public  class MyDerivedClass: MyBaseClass           //继承的用法，MyDerivedClass派生自MyBaseClass
+{
+    //
+}
+
+
+public class MyDerivedClassTwo: MyDerivedClass,IInterface1,IInterface2     //类派生自接口或类，用逗号隔开
+{
+
+}
+
+public struct MyDerivedStruct: IInterface1,IInterface2          //结构派生自接口
+{
+
 }
